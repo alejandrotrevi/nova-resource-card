@@ -14,7 +14,7 @@
         "@babel/preset-env": "^7.16.11",
         "@vue/babel-plugin-jsx": "^1.1.0",
         "@vue/babel-preset-jsx": "^1.2.4",
-        "@vue/compiler-sfc": "^3.2.22",
+        "@vue/compiler-sfc": "^3.5.0",
         "axios": "^1.6.0",
         "babel-plugin-syntax-dynamic-import": "^6.18.0",
         "babel-plugin-syntax-jsx": "^6.18.0",
@@ -26,8 +26,8 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.2",
-        "@vue/compat": "^3.2.29",
-        "vue": "^3.2.29",
+        "@vue/compat": "^3.5.0",
+        "vue": "^3.5.0",
         "vuex": "^4.0.2"
     }
 }

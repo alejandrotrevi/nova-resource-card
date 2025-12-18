@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import {CancelToken, isCancel} from 'axios'
+import {isCancel} from 'axios'
 import {
   // HasCards,
   // Paginatable,
@@ -108,13 +108,14 @@ export default {
       this.loading = true
       this.resourceResponseError = null
 
+      const controller = new AbortController()
+      this.canceller = controller
+
       return minimum(
         Nova.request().get('/nova-api/' + this.resourceName, {
           // params: this.resourceRequestQueryString,
           params: {},
-          cancelToken: new CancelToken(canceller => {
-            this.canceller = canceller
-          })
+          signal: controller.signal
         }),
         300
       ).then(({data}) => {

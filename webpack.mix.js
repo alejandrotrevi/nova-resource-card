@@ -1,5 +1,7 @@
 let mix = require('laravel-mix')
+let path = require('path')
 
+// Load custom Nova mix extension
 require('./nova.mix')
 
 mix
